@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystery World</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background: radial-gradient(circle at top, #30205c, #090b19 65%);
+}
+
+header {
+  padding: 25px 15px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #bda5ff;
+}
+
+main {
+  padding: 65px 20px 40px;
+}
+
+.tag {
+  color: #bda5ff;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+p {
+  color: #c5c4d5;
+  line-height: 1.8;
+}
+
+.door {
+  margin: 35px auto;
+  width: 180px;
+  height: 230px;
+  border: 2px solid #a98aff;
+  border-radius: 90px 90px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  box-shadow: 0 0 35px #865bff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  to {
+    box-shadow: 0 0 65px #a98aff;
+  }
+}
+
+button {
+  border: 0;
+  border-radius: 30px;
+  padding: 16px 28px;
+  background: linear-gradient(90deg, #8155ff, #bd67ff);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#result {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 420px;
+  border: 1px solid #7055a9;
+  border-radius: 16px;
+  background: #17152c;
+  display: none;
+}
+
+footer {
+  padding: 30px;
+  color: #777;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ MYSTERY WORLD</div>
+</header>
+
+<main>
+
+<div class="tag">WELCOME TO THE UNKNOWN</div>
+
+<h1>Enter The World<br>Of Mystery</h1>
+
+<p>
+A mysterious world is waiting for you.<br>
+Every click reveals something unexpected.
+</p>
+
+<div class="door">🚪</div>
+
+<h2>Are You Ready To Discover The Secret?</h2>
+
+<p>
+Open the door and discover your surprise!
+</p>
+
+<button onclick="openDoor()">
+OPEN THE DOOR ✨
+</button>
+
+<div id="result">
+<h2>🎉 YOUR SURPRISE!</h2>
+<p id="message"></p>
+
+<button onclick="openDoor()">
+DISCOVER ANOTHER
+</button>
+</div>
+
+</main>
+
+<footer>
+© 2026 Mystery World | Explore The Unknown
+</footer>
+
+<script>
+const surprises = [
+"Your next big idea could change your future! 🚀",
+"Believe in your creativity and keep exploring! 🌟",
+"The world is full of amazing discoveries! 🌍",
+"Today is a great day to try something new! ❤️",
+"Your imagination has no limits! 💡"
+];
+
+function openDoor() {
+  document.getElementById("message").textContent =
+    surprises[Math.floor(Math.random() * surprises.length)];
+
+  document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
+</html>
