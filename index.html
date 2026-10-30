@@ -39,8 +39,8 @@ small{color:var(--muted)}a{color:#c9baff}
 </main>  
 <script type="module">  
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';  
-const SUPABASE_URL='PASTE_YOUR_SUPABASE_PROJECT_URL';  
-const SUPABASE_ANON_KEY='PASTE_YOUR_SUPABASE_ANON_KEY';  
+const SUPABASE_URL='https://rjkxavvgadiexlbhyzfy.supabase.co';  
+const SUPABASE_ANON_KEY='sb_publishable_emvbJ3l4llZyy9znZ323PA_mf-1GS1C';  
 const ready=!SUPABASE_URL.startsWith('PASTE_')&&!SUPABASE_ANON_KEY.startsWith('PASTE_');  
 const $=id=>document.getElementById(id);  
 if(!ready){$('auth').insertAdjacentHTML('beforeend','<div class="notice">Setup required: add your Supabase Project URL and anon/public key in this file, then run the SQL in schema.sql. Never put a service-role key here.</div>');}  
